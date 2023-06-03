@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <title>taj mahal </title>
+</head>
+<body>
+
+
+
+
+    <header>
+         
+        <nav>
+          <ul>
+            <li><a href="index2.html">Accueil</a></li>
+           
+          </ul>
+        </nav>
+      </header>
+
+
+    <h2>  taj mahal </h2>
+    
+
+<div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="https://media-cdn.tripadvisor.com/media/photo-s/1b/f9/e5/06/bon-appetit.jpg" alt="Image 1" width="400px" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://www.alger-city.com/pics/tourisme/restaurants/restaurant-taj-mahal/restaurant-taj-mahal-cheraga-alger.jpg" alt="Image 2" width="500px" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://fastly.4sqi.net/img/general/600x600/65530452_AnNtWVFoTB2z2_LE2Yrndr8jeVsOdEEHdaKKc0rp7js.jpg" alt="Image 3"width="500px" />
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+  var swiper = new Swiper(".swiper-container", {
+  pagination: {
+  el: ".swiper-pagination",
+  },
+  });
+  </script>
+
+
+
+
+<p><b>Détails</b> <br>
+    CUISINES <br>
+    indian<br>
+    REPAS<br>
+    Déjeuner, Dîner</p>  
+
+     
+      
+      <section id="commentaires">
+        <h2>Commentaires</h2>
+        <ul id="liste-commentaires">
+          <!-- Liste des commentaires (à remplir avec JavaScript) -->
+        </ul>
+        <form>
+          <label for="nom">Nom :</label>
+          <input type="text" id="nom" required>
+          <label for="email">Adresse e-mail :</label>
+          <input type="email" id="email" required>
+          
+          </select>
+          <label for="commentaire">Commentaire :</label>
+          <textarea id="commentaire" required></textarea>
+
+          
+          
+          <div class="notation">
+            <span class="etoile" data-value="1">&#9734;</span>
+            <span class="etoile" data-value="2">&#9734;</span>
+            <span class="etoile" data-value="3">&#9734;</span>
+            <span class="etoile" data-value="4">&#9734;</span>
+            <span class="etoile" data-value="5">&#9734;</span>
+          </div>
+          
+            
+           
+            <script>
+                const stars = document.querySelectorAll('.star');
+                let check = false;
+                stars.forEach(star => {
+                    star.addEventListener('mouseover', selectStars);
+                    star.addEventListener('mouseleave', unselectStars);
+                    star.addEventListener('click', activeSelect);
+                })
+        
+                function selectStars(e) {
+                    const data = e.target;
+                    const etoiles = priviousSiblings(data);
+                    if (!check) {
+                        etoiles.forEach(etoile => {
+                            etoile.classList.add('hover');
+                        })
+                    }
+        
+                }
+        
+                function unselectStars(e) {
+                    const data = e.target;
+                    const etoiles = priviousSiblings(data);
+                    if (!check) {
+                        etoiles.forEach(etoile => {
+                            etoile.classList.remove('hover');
+                        })
+                    }
+                }
+        
+                function activeSelect(e) {
+                    if (!check) {
+                        check = true;
+                        document.querySelector('.note').innerHTML = 'Note ' + e.target.dataset.note;
+                    }
+                }
+        
+                function priviousSiblings(data) {
+                    let values = [data];
+                    while (data = data.previousSibling) {
+                        if (data.nodeName === 'I') {
+                            values.push(data);
+                        }
+                    }
+                    return values;
+                }
+            </script> 
+          <button type="submit">Envoyer</button>
+        </form>
+      </section>
+      
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+</body>
+<h2 id="fin"> </h2>
+  <footer style="background-color: brown;">
+   
+   <p style="color: aliceblue;" >Cette version de  <b>Restaurationdz </b> site internet s'adresse aux personnes parlant français .
+     Si vous habitez un autre pays ou une autre région, merci de choisir notre version appropriée pour votre pays ou région dans le menu déroulant.
+   <b> Restaurationdz </b> ne garantit pas la disponibilité des prix affichés sur nos sites et applications. Des conditions et restrictions telles que, 
+     entre autres, des durées de voyage imposées ou des dates de fermeture peuvent s'appliquer.  <br>
+   <b> Restaurationdz </b>  n'est pas responsable du contenu d'autres sites internet qui n'appartiennent pas ou ne sont pas opérés par <b> Restaurationdz </b> .
+    <b> Restaurationdz </b>  n'est ni un agent de réservation ni un tour opérateur. Lorsque vous réservez auprès de nos partenaires, consultez leur site pour connaître tous les frais applicables. <br> </p>
+
+  <title style="color: aliceblue;">  <b> Pour nous contacter : </b> </title>
+  <p style="color: aliceblue;"> Numéro de téléphone :<a href="tel:+213560603926" style="color: aliceblue;"> +213560603926</a><br> 
+    Email : <a href="email: Restaurationdz@gmail.com " style="color: aliceblue;">  Restaurationdz@gmail.com </a> <br>
+    Instagram : <a href="instagram.com"style="color: aliceblue;"> restaurationdz</a> <br></p>
+
+  
+      <a href="#titre"> go on the top</a>
+  </br>
+
+  </footer></p> 
+  </html>

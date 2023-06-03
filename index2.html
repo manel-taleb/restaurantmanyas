@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+   
+       <title> restauration dz</title>
+       <meta charset="UTF-8" >
+       <link rel="stylesheet" href="style.css">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+       <title > restauration dz </title>
+       <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+   
+  
+
+    </head>
+
+   
+    
+
+  <body style="background-color: beige;">
+   <header>
+    <img src="img/re.png" alt="google" width="150px">
+    <nav>
+      <ul>
+        <li> <a href="#titre"> Accueil</a>   </li>
+         <li><a href="#restau "> Blog</a> </li>
+        <li><a href="#fin "> Contact</a> </li>
+       
+      </ul>
+    </nav>
+
+   
+   </header>
+  
+    <div class="container " >  
+      <div class="overlay" > </div>  </div>
+                  
+    <!-- le titre   -->
+    <hr> 
+    <center><h1 id ="titre" style="color: black;" >  restauration dz   </h1></center>
+
+     <!-- introduction de site    -->
+    <center><p style="color: black;"> Bienvenue sur notre site web de recommandation de restaurants! <br> 
+      Si vous êtes à la recherche d'une expérience culinaire inoubliable, vous êtes au bon endroit.
+       <br> Notre plateforme en ligne offre une sélection diversifiée de restaurants de haute qualité, allant des bistros intimes aux restaurants gastronomiques raffinés.
+       <br> Que vous soyez à la recherche d'un restaurant romantique pour une soirée en amoureux ou d'un endroit convivial pour un repas entre amis, notre site vous permettra de trouver facilement et rapidement le restaurant idéal. 
+       <br> Nous sommes passionnés par la nourriture et nous sommes fiers de partager nos découvertes culinaires avec vous.
+        <br> Explorez notre site web et découvrez les meilleurs restaurants de la ville! </p></center>
+    
+
+
+    <center><form action="javascript:void(0);" onsubmit="searchRestaurant();">
+      <label for="restaurant-search" >Chercher un restaurant :</label>
+      <select id="restaurant-search" name="restaurant">
+        <option value="signature">Restaurant Signature</option>
+        <option value="trad">Restaurant Cook's traditional </option>
+        <option value="normand">Restaurant Le normand </option>
+        <option value="Coin">Restaurant Le Coin Restaurant & Lounge</option>
+        <option value="tajmahal">Restaurant Taj mahal</option>
+      </select>
+      <button type="submit">Rechercher</button>
+    </form></center>
+    
+    <script>
+      function searchRestaurant() {
+        const select = document.getElementById("restaurant-search");
+        const selectedOption = select.options[select.selectedIndex].value;
+        if (selectedOption === "signature") {
+          window.location.href = "signature.html";
+        } else if (selectedOption === "trad") {
+          window.location.href = "traditional.html";
+        } else if (selectedOption === "normand") {
+          window.location.href = "normand.html";
+        }else if (selectedOption === "Coin") {
+          window.location.href = "Coin.html";
+        }else if (selectedOption === "tajmahal") {
+          window.location.href = "mahal.html";
+        }
+      }
+    </script>
+    
+
+
+
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="https://www.visa-algerie.com/old-wp-content/uploads/2018/12/Tandoor-e1545123836356.jpg" alt="Image 1" width="400px" />
+            </div>
+            <div class="swiper-slide">
+              <img src="https://www.ahstatic.com/photos/1540_rsr002_00_p_1024x768.jpg" alt="Image 2" width="500px" />
+            </div>
+            <div class="swiper-slide">
+              <img src="https://lepetitjournal.com/sites/default/files/inline-images/Restaurant%20Le%20Corso%20Sidi%20Fredj.jpg" alt="Image 3"width="500px" />
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+        
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper(".swiper-container", {
+    pagination: {
+      el: ".swiper-pagination",
+    },
+  });
+</script>
+
+
+
+<h3 style="color: darkgoldenrod;"> <u>Des articles  qui  pourraient vous interesser : </u></h3>
+
+
+
+  <a href="article1.html">  Les meilleurs restaurants d'Alger <br>
+    <img src="https://mediaim.expedia.com/destination/1/9c67fd6c233c66d93cb39e498547d155.jpg" alt="Les meilleurs restaurants d'Alger :" width="500px"> <br>
+  </a>
+  <a href="article2.html">Les recettes traditionnelles revisitées<br>
+    <img src="https://i0.wp.com/destinationsmed.com/wp-content/uploads/2022/10/classique-cuisine-algerienne.jpg?w=568" alt="Article 2 Image"width="500px"><br>
+  </a>
+  <a href="article3.html">des recettes savoureuses<br>
+    <img src="https://us.123rf.com/450wm/fauzymuhammad030/fauzymuhammad0302205/fauzymuhammad030220500052/187168858-cuisine-et-cuisine-mod%C3%A8le-sans-couture-de-doodle-en-couleur-noir-et-blanc-adapt%C3%A9-%C3%A0-l-arri%C3%A8re-plan-ou.jpg?ver=6" alt="Article 3 Image"width="500px"><br>
+  </a>
+
+
+
+
+
+
+
+
+
+
+       
+         
+  </body>
+  <h2 id="fin"> </h2>
+  <footer style="background-color: brown;">
+   
+   <p style="color: aliceblue;" >Cette version de  <b>Restaurationdz </b> site internet s'adresse aux personnes parlant français .
+     Si vous habitez un autre pays ou une autre région, merci de choisir notre version appropriée pour votre pays ou région dans le menu déroulant.
+   <b> Restaurationdz </b> ne garantit pas la disponibilité des prix affichés sur nos sites et applications. Des conditions et restrictions telles que, 
+     entre autres, des durées de voyage imposées ou des dates de fermeture peuvent s'appliquer.  <br>
+   <b> Restaurationdz </b>  n'est pas responsable du contenu d'autres sites internet qui n'appartiennent pas ou ne sont pas opérés par <b> Restaurationdz </b> .
+    <b> Restaurationdz </b>  n'est ni un agent de réservation ni un tour opérateur. Lorsque vous réservez auprès de nos partenaires, consultez leur site pour connaître tous les frais applicables. <br> </p>
+
+  <h4 style="color: aliceblue;">  <b> Pour nous contacter : </b> </h4>
+  <p style="color: aliceblue;"> Numéro de téléphone :<a href="tel:+213560603926" style="color: aliceblue;"> +213560603926</a><br> 
+    Email : <a href="email: Restaurationdz@gmail.com " style="color: aliceblue;">  Restaurationdz@gmail.com </a> <br>
+    Instagram : <a href="www.instagram.com"style="color: aliceblue;"> restaurationdz</a> <br></p>
+
+  
+      <a href="#titre"> go on the top</a>
+  </br>
+
+  </footer></p> 
+  </html>
+
